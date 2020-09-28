@@ -54,5 +54,7 @@ showWeatherData = (data) => {
   document.getElementById('temp').innerHTML = data.main.temp;
   document.getElementById('min-temp').innerHTML = data.main.temp_max;
   document.getElementById('max-temp').innerHTML = data.main.temp_min;
+  const icon = data.weather[0].icon;
+  document.getElementById('image').innerHTML=`<img src = 'http://openweathermap.org/img/wn/${icon}@2x.png'></img>`
 }
 
